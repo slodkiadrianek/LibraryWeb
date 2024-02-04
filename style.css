@@ -85,9 +85,10 @@ body {
   font-family: var(--fontFamily);
   font-size: 1vmax;
 }
+#section__2,
 #section__4,
 #section__3 {
-  margin: 5vmax 3vmax;
+  margin: 7vmax 3vmax;
 }
 
 .long__text {
