@@ -9,7 +9,7 @@
   --fontFamily: "Merriweather", sans-serif;
   --mainColor: #f5f5f5;
   --sideColor: #3498db;
-  --secondSideColor: #2ecc71;
+  --secondSideColor: #585858;
   --footerAndHeader: #0f2a46;
   --text: #333333;
   --Hover: #853229;
@@ -41,6 +41,7 @@ body {
 }
 .heaader__list__el {
   display: inline;
+  font-family: var(--fontFamily);
   margin-inline: 1vmax;
   font-size: 1vmax;
 }
@@ -58,19 +59,37 @@ body {
 }
 
 /* section1 */
+#section__3,
+#section__2,
 #section___1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 10vmax 2vmax;
+  gap: 1vmax;
 }
+
 .text__quote {
   text-align: center;
   font-family: var(--fontFamily);
   color: var(--Hover);
   font-size: 2.5vmax;
 }
+
 .text__quote__author {
   color: #0f2a46;
+}
+.proposal__author__text {
+  font-family: var(--fontFamily);
+  font-size: 1vmax;
+}
+#section__3 {
+  margin: 5vmax 3vmax;
+}
+.long__text {
+  text-align: center;
+  font-family: var(--fontFamily);
+  color: var(--secondSideColor);
+  font-size: 1.3vmax;
 }
