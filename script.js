@@ -5,6 +5,9 @@ const quotePlaceAuthor = document.querySelector(".text__quote__author");
 const dailyBookImage = document.querySelector(".daily__book__image");
 const proposalBookText = document.querySelector(".proposal__book__text");
 const proposalAuthorText = document.querySelector(".proposal__author__text");
+const actualTemperature = document.querySelector(".actual__temperature");
+const actualWindSpeed = document.querySelector(".actual__wind__speed");
+const actualElevation = document.querySelector(".actual__elevation");
 
 const epikBook = [];
 const lirykBook = [];
@@ -19,6 +22,7 @@ class App {
 
     this.quoteApi();
     this.bookAPI();
+    this._getPosition();
   }
   // Tworzenie cytatów
   async quoteApi() {
@@ -46,7 +50,7 @@ class App {
     });
     this._bookOfTheDay();
   }
-  // Tworzenie książki dnia
+  // Tworzenie książki
   _bookOfTheDay() {
     allBooks = epikBook.concat(lirykBook).concat(dramaBook);
     const indexOfBook = Math.trunc(Math.random() * 91);
@@ -54,6 +58,26 @@ class App {
     dailyBookImage.src = `${randomBook.simple_thumb}`;
     proposalBookText.textContent = randomBook.title;
     proposalAuthorText.textContent = randomBook.author;
+  }
+  _getPosition() {
+    navigator.geolocation.getCurrentPosition(this._actualWheather, function () {
+      console.log(`nie udało się pobrać Twojej pozycji`);
+    });
+  }
+  async _actualWheather(position) {
+    const { latitude } = position.coords;
+    const { longitude } = position.coords;
+    const keyApi = "82c2d0a4b2d3714d4b07a02dce36340c";
+    const ApiURL = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`;
+    const response = await fetch(ApiURL + `&appid=${keyApi}`);
+    const weather = await response.json();
+    console.log(weather);
+    const { temperature_2m } = weather.current;
+    const { wind_speed_10m } = weather.current;
+    const { elevation } = weather;
+    actualElevation.textContent = `Znajdujesz się ${elevation}m nad poziomeme morza`;
+    actualTemperature.textContent = `Obecna temperatura: ${temperature_2m}°C`;
+    actualWindSpeed.textContent = `Wiatr wieje z prędkością: ${wind_speed_10m} km/h`;
   }
 }
 const app = new App();
