@@ -59,6 +59,7 @@ body {
 }
 
 /* section1 */
+#section__4,
 #section__3,
 #section__2,
 #section___1 {
@@ -84,12 +85,24 @@ body {
   font-family: var(--fontFamily);
   font-size: 1vmax;
 }
+#section__4,
 #section__3 {
   margin: 5vmax 3vmax;
 }
+
 .long__text {
   text-align: center;
   font-family: var(--fontFamily);
   color: var(--secondSideColor);
   font-size: 1.3vmax;
+}
+.book__con {
+  display: flex;
+  gap: 2vmax;
+}
+.book__box {
+  gap: 1vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
