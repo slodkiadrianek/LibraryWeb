@@ -9,6 +9,7 @@ const proposalAuthorText = document.querySelector(".proposal__author__text");
 const epikBook = [];
 const lirykBook = [];
 const dramaBook = [];
+let allBooks;
 // const
 
 class App {
@@ -19,6 +20,7 @@ class App {
     this.quoteApi();
     this.bookAPI();
   }
+  // Tworzenie cytatów
   async quoteApi() {
     const response = await fetch("https://api.quotable.io/random");
     this.dataQuote = await response.json();
@@ -27,6 +29,7 @@ class App {
     quotePlace.textContent = content;
     quotePlaceAuthor.textContent = author;
   }
+  // Tworzenie Książek
   async bookAPI() {
     const response = await fetch("https://wolnelektury.pl/api/books/");
     this.dataBook = await response.json();
@@ -43,8 +46,9 @@ class App {
     });
     this._bookOfTheDay();
   }
+  // Tworzenie książki dnia
   _bookOfTheDay() {
-    const allBooks = epikBook.concat(lirykBook).concat(dramaBook);
+    allBooks = epikBook.concat(lirykBook).concat(dramaBook);
     const indexOfBook = Math.trunc(Math.random() * 91);
     const randomBook = allBooks[indexOfBook];
     dailyBookImage.src = `${randomBook.simple_thumb}`;
