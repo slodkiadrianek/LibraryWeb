@@ -109,10 +109,14 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.recomendation,
 .actual__elevation,
 .actual__wind__speed,
 .actual__temperature {
   font-size: 1vmax;
   font-family: var(--fontFamily);
   color: var(--text);
+}
+.recomendation {
+  font-size: 1.5vmax;
 }

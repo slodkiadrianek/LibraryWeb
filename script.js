@@ -8,6 +8,7 @@ const proposalAuthorText = document.querySelector(".proposal__author__text");
 const actualTemperature = document.querySelector(".actual__temperature");
 const actualWindSpeed = document.querySelector(".actual__wind__speed");
 const actualElevation = document.querySelector(".actual__elevation");
+const recomendation = document.querySelector(".recomendation");
 
 const epikBook = [];
 const lirykBook = [];
@@ -75,9 +76,16 @@ class App {
     const { temperature_2m } = weather.current;
     const { wind_speed_10m } = weather.current;
     const { elevation } = weather;
-    actualElevation.textContent = `Znajdujesz się ${elevation}m nad poziomeme morza`;
+    actualElevation.textContent = `Znajdujesz się ${elevation}m nad poziomem morza`;
     actualTemperature.textContent = `Obecna temperatura: ${temperature_2m}°C`;
     actualWindSpeed.textContent = `Wiatr wieje z prędkością: ${wind_speed_10m} km/h`;
+    if (temperature_2m < 6) {
+      recomendation.textContent = `Zalecamy pozostać w domu🥶`;
+    } else if (temperature_2m < 20) {
+      recomendation.textContent = `Zalecamy  przejść się na spacer😉`;
+    } else if (temperature_2m > 20) {
+      recomendation.textContent = `Pamiętaj o odpowiednim nawodnieniu🥵`;
+    }
   }
 }
 const app = new App();
