@@ -166,3 +166,18 @@ body {
 .newsletter__input:focus {
   outline: none;
 }
+.daily__book__image {
+  filter: blur(10px);
+  image-resolution: revert-layer;
+  /* max-height: 10%; */
+}
+.stickyheader {
+  position: relative;
+  padding: 1vmax 2vmax;
+  z-index: 1;
+  top: -1vmax;
+  left: -2vmax;
+  width: 100%;
+  position: fixed;
+  margin: 0vmax;
+}

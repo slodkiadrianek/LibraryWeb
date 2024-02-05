@@ -72,7 +72,6 @@ class App {
     const ApiURL = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`;
     const response = await fetch(ApiURL + `&appid=${keyApi}`);
     const weather = await response.json();
-    console.log(weather);
     const { temperature_2m } = weather.current;
     const { wind_speed_10m } = weather.current;
     const { elevation } = weather;
