@@ -21,7 +21,6 @@ body {
 }
 
 #header {
-  background-color: var(--mainColor);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,14 +37,12 @@ body {
   list-style: none;
   font-family: var(--fontFamily);
   color: var(--text);
-  background-color: var(--mainColor);
 }
 .heaader__list__el {
   display: inline;
   font-family: var(--fontFamily);
   margin-inline: 1vmax;
   font-size: 1vmax;
-  background-color: var(--mainColor);
 }
 .heaader__list__el:hover {
   color: var(--Hover);
@@ -54,7 +51,6 @@ body {
 .header__con {
   display: flex;
   align-items: center;
-  background-color: var(--mainColor);
 }
 .header__logo {
   height: 4vmax;
