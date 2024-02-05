@@ -120,3 +120,49 @@ body {
 .recomendation {
   font-size: 1.5vmax;
 }
+#footer {
+  background-color: var(--footerAndHeader);
+  color: var(--mainColor);
+  font-family: var(--fontFamily);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2vmax 1vmax;
+  gap: 5vmax;
+}
+.footer {
+  color: var(--mainColor);
+}
+.info__con {
+  display: flex;
+  gap: 4vmax;
+}
+.footer__list__element {
+  margin-block: 1vmax;
+  list-style: none;
+}
+.newsletter__con {
+  display: flex;
+  flex-direction: column;
+  gap: 1vmax;
+}
+.newsletter {
+  font-size: 1.7vmax;
+}
+.newsletter__input::placeholder,
+.newsletter__input {
+  padding: 1vmax;
+  background-color: transparent;
+  border: 0.2vmax solid var(--mainColor);
+  border-radius: 0.2vmax;
+  color: var(--mainColor);
+  font-family: var(--fontFamily);
+  font-size: 0.8vmax;
+}
+.newsletter__input::placeholder {
+  border: none;
+  padding: 0vmax;
+}
+.newsletter__input:focus {
+  outline: none;
+}
