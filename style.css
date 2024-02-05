@@ -166,10 +166,8 @@ body {
 .newsletter__input:focus {
   outline: none;
 }
-.daily__book__image {
+.daily__book__image__blured {
   filter: blur(10px);
-  image-resolution: revert-layer;
-  /* max-height: 10%; */
 }
 .stickyheader {
   position: relative;
