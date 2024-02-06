@@ -35,6 +35,8 @@ body {
   font-size: 2vmax;
 }
 .heaader__list {
+  display: flex;
+  align-items: center;
   list-style: none;
   font-family: var(--fontFamily);
   color: var(--text);

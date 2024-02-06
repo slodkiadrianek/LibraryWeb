@@ -19,11 +19,10 @@ const logpLoginValue = document.querySelector(".logLoginValue");
 
 let user;
 class newUser {
-  #password;
   constructor(login, email, password) {
     this.login = login;
     this.email = email;
-    this.#password = password;
+    this.password = password;
   }
 }
 
@@ -109,9 +108,14 @@ class loginAndRegisterApp {
   }
 
   _loginCheck() {
+    console.log(this.#account);
     console.log(logpLoginValue.value, logpasswordValue.value);
     this.#account.forEach((el) => {
-      console.log(this.#account.el.password);
+      if (
+        el.login === logpLoginValue.value &&
+        el.password === logpasswordValue.value
+      )
+        console.log(`Zalogowano ${el.login}`);
     });
   }
 }
