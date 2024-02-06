@@ -8,6 +8,7 @@ const loginValue = document.querySelector(".loginValue");
 const emailValue = document.querySelector(".emailValue");
 const passwordValue = document.querySelector(".passwordValue");
 const registerButton = document.querySelector(".register__button");
+const register = document.querySelector(".register");
 
 // class login {
 //   constructor() {}
@@ -26,75 +27,57 @@ class newUser {
 class loginAndRegisterApp {
   #account = [];
   constructor() {
-    newsletterInput.addEventListener(
-      "keydown",
-      this.checkEmail.bind(newsletterInput)
-    );
+    newsletterInput.addEventListener("keydown", this.checkEmail.bind(this));
     loginSwitch.addEventListener("click", this._switch);
     registerButton.addEventListener("click", this._checkValidation.bind(this));
+    register.addEventListener("click", this._switch);
   }
-
+  // zmiana logowania na rejestracje i z powrotem
   _switch() {
     if (loginSection.classList.contains("active")) {
       loginSection.classList.remove("active");
       name.textContent = "Zarejestruj się";
+      register.classList.add("active");
+    } else {
+      loginSection.classList.add("active");
+      name.textContent = "Logowanie";
+      register.classList.remove("active");
+    }
+  }
+  // sprawdzanie maila
+  emailvalidation(x) {
+    const input = x;
+    if (input === "") alert("To pole nie może być puste");
+    else {
+      const specialCharacters = ["@", ".com"];
+      if (specialCharacters.every((el) => input.includes(el))) {
+        const splitted = input.split("@");
+        const firstHalf = splitted[0];
+        const secondHalf = splitted[1].split(".com");
+        if (firstHalf.length > 0 && secondHalf[0].length > 0) {
+          console.log(`Email poprawny`);
+          return true;
+        } else {
+          alert("Niepoprawne dane e-mail");
+          return false;
+        }
+      } else {
+        alert("Niepoprawne dane e-mail");
+        return false;
+      }
     }
   }
   checkEmail(e) {
-    let x = this;
-    const emailValidation = function () {
-      const input = x.value;
-      if (input === "") alert("To pole nie może być puste");
-      else {
-        const specialCharacters = ["@", ".com"];
-        if (specialCharacters.every((el) => input.includes(el))) {
-          const splitted = input.split("@");
-          const firstHalf = splitted[0];
-          const secondHalf = splitted[1].split(".com");
-          if (firstHalf.length > 0 && secondHalf[0].length > 0) {
-            console.log(`Email poprawny`);
-            return true;
-          } else {
-            alert("Niepoprawne dane e-mail");
-            return false;
-          }
-        } else {
-          alert("Niepoprawne dane e-mail");
-          return false;
-        }
-      }
-    };
-
+    const inputValue1 = newsletterInput.value;
     if (e.key === "Enter") {
-      emailValidation();
+      this.emailvalidation(inputValue1);
+      newsletterInput.value = "";
     }
   }
-  //   #accounts;
+  // Sprawdzanie danych rejestracji
   _checkValidation() {
     let isValid = false;
-    const emailValidation = function () {
-      const input = emailValue.value;
-      if (input === "") alert("To pole nie może być puste");
-      else {
-        const specialCharacters = ["@", ".com"];
-        if (specialCharacters.every((el) => input.includes(el))) {
-          const splitted = input.split("@");
-          const firstHalf = splitted[0];
-          const secondHalf = splitted[1].split(".com");
-          if (firstHalf.length > 0 && secondHalf[0].length > 0) {
-            console.log(`Email poprawny`);
-            return true;
-          } else {
-            alert("Niepoprawne dane e-mail");
-            return false;
-          }
-        } else {
-          alert("Niepoprawne dane e-mail");
-          return false;
-        }
-      }
-    };
-
+    const inputValue = emailValue.value;
     if (this.#account.length > 0) {
       this.#account.forEach((el) => {
         if (
@@ -108,14 +91,14 @@ class loginAndRegisterApp {
       isValid = true;
     }
 
-    if (!isValid === false && emailValidation()) {
+    if (!isValid === false && this.emailvalidation(inputValue)) {
       user = new newUser(
         loginValue.value,
         emailValue.value,
         passwordValue.value
       );
       this.#account.push(user);
-      console.log(this.#account);
+      loginValue.value = emailValue.value = passwordValue.value = "";
     }
   }
 }
