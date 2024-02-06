@@ -1,7 +1,7 @@
 "use strict";
 const newsletterInput = document.querySelector(".newsletter__input");
 // const loginForm = document.querySelector(".login");
-const loginSwitch = document.querySelector(".login__link");
+const loginSwitch = document.querySelectorAll(".login__link");
 const loginSection = document.querySelector(".login");
 const name = document.querySelector(".name");
 const loginValue = document.querySelector(".loginValue");
@@ -9,6 +9,9 @@ const emailValue = document.querySelector(".emailValue");
 const passwordValue = document.querySelector(".passwordValue");
 const registerButton = document.querySelector(".register__button");
 const register = document.querySelector(".register");
+const loginButton = document.querySelector(".login__button");
+const logpasswordValue = document.querySelector(".logpasswordValue");
+const logpLoginValue = document.querySelector(".logLoginValue");
 
 // class login {
 //   constructor() {}
@@ -28,9 +31,11 @@ class loginAndRegisterApp {
   #account = [];
   constructor() {
     newsletterInput.addEventListener("keydown", this.checkEmail.bind(this));
-    loginSwitch.addEventListener("click", this._switch);
+    loginSwitch.forEach((el) => {
+      el.addEventListener("click", this._switch.bind(this));
+    });
+    loginButton.addEventListener("click", this._loginCheck.bind(this));
     registerButton.addEventListener("click", this._checkValidation.bind(this));
-    register.addEventListener("click", this._switch);
   }
   // zmiana logowania na rejestracje i z powrotem
   _switch() {
@@ -98,8 +103,16 @@ class loginAndRegisterApp {
         passwordValue.value
       );
       this.#account.push(user);
+      console.log(this.#account);
       loginValue.value = emailValue.value = passwordValue.value = "";
     }
+  }
+
+  _loginCheck() {
+    console.log(logpLoginValue.value, logpasswordValue.value);
+    this.#account.forEach((el) => {
+      console.log(this.#account.el.password);
+    });
   }
 }
 
