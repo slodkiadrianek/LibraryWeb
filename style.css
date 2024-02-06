@@ -179,3 +179,8 @@ body {
   position: fixed;
   margin: 0vmax;
 }
+.link {
+  margin: 0;
+  text-decoration: none;
+  color: var(--text);
+}

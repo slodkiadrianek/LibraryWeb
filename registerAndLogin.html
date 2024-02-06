@@ -4,9 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="registerAndLogin.css" />
   </head>
   <body>
     <!-- Header -->
+    <header id="header">
+      <div class="header__con">
+        <img
+          class="header__logo"
+          src="images/book-open-svgrepo-com.svg"
+          alt=""
+        />
+        <h1 class="header__text">Biblioteka</h1>
+      </div>
+      <ul class="heaader__list">
+        <li class="heaader__list__el">Cytaty</li>
+        <li class="heaader__list__el">Książki</li>
+        <li class="heaader__list__el">Konto</li>
+        <li class="heaader__list__el">
+          <a class="heaader__list__el link" href="registerAndLogin.html"
+            >Zaloguj/Zarejestruj</a
+          >
+        </li>
+      </ul>
+    </header>
+    <main>
+      <h1 class="name">LOGOWANIE</h1>
+      <section id="login">
+        <article class="login__form">
+          <input class="login__input" type="text" placeholder="login" />
+          <input class="login__input" type="password" placeholder="Hasło" />
+          <div class="link_button_con">
+            <button class="login__button">Zaloguj</button>
+            <a class="link login__link" href="#">Zarejestruj się</a>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer id="footer">
+      <div>
+        <h1 class="header__text footer">Biblioteka</h1>
+      </div>
+      <div>
+        <ul>
+          <li class="footer__list__element">ul. Marszałkowska 84/92 lok.125</li>
+          <li class="footer__list__element">00-514 Warszawa</li>
+          <li class="footer__list__element">tel. +48 123 456 789</li>
+          <li class="footer__list__element">email biuro@ksiagora.pl</li>
+        </ul>
+      </div>
+      <div class="newsletter__con">
+        <h2 class="newsletter">Newsletter</h2>
+        <p>
+          Jeżeli chcesz być informowany o aktualnościach w serwisie, podaj swój
+          adres e-mail.
+        </p>
+        <input
+          class="newsletter__input"
+          type="text"
+          placeholder="Podaj swój adres email"
+        />
+      </div>
+    </footer>
   </body>
 </html>
