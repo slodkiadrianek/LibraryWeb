@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="registerAndLogin.css" />
+    <script defer src="registerAndLogin.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -31,13 +32,36 @@
     </header>
     <main>
       <h1 class="name">LOGOWANIE</h1>
-      <section id="login">
+      <section class="login">
         <article class="login__form">
           <input class="login__input" type="text" placeholder="login" />
           <input class="login__input" type="password" placeholder="Hasło" />
           <div class="link_button_con">
             <button class="login__button">Zaloguj</button>
             <a class="link login__link" href="#">Zarejestruj się</a>
+          </div>
+        </article>
+      </section>
+      <section class="register active">
+        <article class="login__form">
+          <input
+            class="login__input loginValue"
+            type="text"
+            placeholder="login"
+          />
+          <input
+            class="login__input emailValue"
+            type="email"
+            placeholder="email"
+          />
+          <input
+            class="login__input passwordValue"
+            type="password"
+            placeholder="Hasło"
+          />
+          <div class="link_button_con">
+            <button class="register__button">Zarejestruj się</button>
+            <a class="link login__link" href="#">Zaloguj się</a>
           </div>
         </article>
       </section>

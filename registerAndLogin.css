@@ -18,11 +18,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-#login {
-  display: flex;
+.register,
+.login {
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 4vmax 0vmax;
   /* margin-bottom: 10vmax; */
 
   /* width: 10vmax; */
@@ -33,9 +35,9 @@ body {
   border: 0.3vmax solid var(--text);
   padding: 1.5vmax 1vmax;
   border-radius: 0.5vmax;
-  gap: 3vmax;
+  gap: 2.3vmax;
 }
-
+.register__button,
 .login__button,
 .login__input {
   padding: 0.7vmax;
@@ -44,12 +46,19 @@ body {
   border-radius: 0.2vmax;
   border: 0.2vmax solid var(--text);
 }
+.register__button,
 .login__button {
   width: 100%;
   background-color: var(--footerAndHeader);
   color: var(--mainColor);
   border: 0.2vmax solid var(--footerAndHeader);
   cursor: pointer;
+  transition: all 0.5s linear;
+}
+.register__button:hover,
+.login__button:hover {
+  background-color: var(--Hover);
+  border: 0.2vmax solid var(--Hover);
 }
 .link_button_con {
   width: 100%;
@@ -63,8 +72,13 @@ body {
   font-family: var(--fontFamily);
 }
 .name {
+  font-size: 2vmax;
   text-align: center;
   font-family: var(--fontFamily);
   color: var(--text);
-  margin-bottom: 0.4vmax;
+  margin-bottom: -3vmax;
+  transition: all 0.1s;
+}
+.active {
+  display: flex;
 }
