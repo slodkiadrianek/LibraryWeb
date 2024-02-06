@@ -9,11 +9,13 @@ const actualTemperature = document.querySelector(".actual__temperature");
 const actualWindSpeed = document.querySelector(".actual__wind__speed");
 const actualElevation = document.querySelector(".actual__elevation");
 const recomendation = document.querySelector(".recomendation");
+const newsletterInput = document.querySelector(".newsletter__input");
 
 const epikBook = [];
 const lirykBook = [];
 const dramaBook = [];
 let allBooks;
+
 // const
 
 class App {
@@ -24,6 +26,7 @@ class App {
     this.quoteApi();
     this.bookAPI();
     this._getPosition();
+    newsletterInput.addEventListener("keydown", this.checkEmail);
   }
   // Tworzenie cytatów
   async quoteApi() {
@@ -84,6 +87,32 @@ class App {
       recomendation.textContent = `Zalecamy  przejść się na spacer😉`;
     } else if (temperature_2m > 20) {
       recomendation.textContent = `Pamiętaj o odpowiednim nawodnieniu🥵`;
+    }
+  }
+
+  checkEmail(e) {
+    const emailValidation = function () {
+      const input = newsletterInput.value;
+      if (input === "") alert("To pole nie może być puste");
+      else {
+        const specialCharacters = ["@", ".com"];
+        if (specialCharacters.every((el) => input.includes(el))) {
+          const splitted = input.split("@");
+          const firstHalf = splitted[0];
+          const secondHalf = splitted[1].split(".com");
+          if (firstHalf.length > 0 && secondHalf[0].length > 0) {
+            alert("Zostałeś zapisany do newslettera");
+          } else {
+            alert("Niepoprawne dane e-mail");
+          }
+        } else {
+          alert("Niepoprawne dane e-mail");
+        }
+      }
+    };
+
+    if (e.key === "Enter") {
+      emailValidation();
     }
   }
 }

@@ -25,6 +25,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 1vmax 2vmax;
+  background-color: white;
 }
 .text__quote__author,
 .header__text {

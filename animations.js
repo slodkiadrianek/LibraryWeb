@@ -25,7 +25,6 @@ headerObserver.observe(section1);
 
 const blurEffect = function (entries, observer) {
   const [imgEntry] = entries;
-  console.log(imgEntry);
   if (!imgEntry.isIntersecting) return;
   imgEntry.target.classList.remove("daily__book__image__blured");
   observer.unobserve(imgEntry.target);
