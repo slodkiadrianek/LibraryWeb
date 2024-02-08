@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zarejestruj się / zaloguj</title>
+    <title>Konto</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="registerAndLogin.css" />
-    <script defer src="registerAndLogin.js"></script>
+    <link rel="stylesheet" href="konto.css" />
+    <!-- <script defer src="registerAndLogin.js"></script> -->
+    <script defer src="konto.js"></script>
   </head>
   <body>
-    <!-- Header -->
     <header id="header">
       <div class="header__con">
         <img
@@ -30,47 +30,23 @@
         </li>
       </ul>
     </header>
-    <main>
-      <h1 class="name">LOGOWANIE</h1>
-      <section class="login active">
-        <article class="login__form">
-          <input
-            class="login__input logLoginValue"
-            type="text"
-            placeholder="login"
-          />
-          <input
-            class="login__input logpasswordValue"
-            type="password"
-            placeholder="Hasło"
-          />
-          <div class="link_button_con">
-            <button class="login__button">Zaloguj</button>
-            <a class="link login__link" href="#">Zarejestruj się</a>
-          </div>
+    <main id="main">
+      <aside class="img__section">
+        <img class="profile__img" src="images/Profilowe.webp" alt="" />
+        <input class="input__file" type="file" />
+      </aside>
+      <section class="info_section">
+        <article class="main__info">
+          <h2 class="hello__user">Witaj</h2>
+          <span class="show__time">Godzina</span>
         </article>
-      </section>
-      <section class="register">
-        <article class="login__form">
-          <input
-            class="login__input loginValue"
-            type="text"
-            placeholder="login"
-          />
-          <input
-            class="login__input emailValue"
-            type="email"
-            placeholder="email"
-          />
-          <input
-            class="login__input passwordValue"
-            type="password"
-            placeholder="Hasło"
-          />
-          <div class="link_button_con">
-            <button class="register__button">Zarejestruj się</button>
-            <a class="link login__link" href="#">Zaloguj się</a>
-          </div>
+
+        <p class="showEmail">Twój adres email</p>
+        <article>
+          <aside>
+            <p>Ulubione Książki</p>
+            <p>Książki zarezerwowane</p>
+          </aside>
         </article>
       </section>
     </main>

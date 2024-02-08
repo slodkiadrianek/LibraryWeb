@@ -18,11 +18,13 @@ const logpLoginValue = document.querySelector(".logLoginValue");
 // }
 
 let user;
+
 class newUser {
   constructor(login, email, password) {
     this.login = login;
     this.email = email;
     this.password = password;
+    this.profileImg = "images/Profilowe.webp";
   }
 }
 
@@ -102,20 +104,21 @@ class loginAndRegisterApp {
         passwordValue.value
       );
       this.#account.push(user);
-      console.log(this.#account);
       loginValue.value = emailValue.value = passwordValue.value = "";
     }
   }
 
   _loginCheck() {
-    console.log(this.#account);
-    console.log(logpLoginValue.value, logpasswordValue.value);
     this.#account.forEach((el) => {
       if (
         el.login === logpLoginValue.value &&
         el.password === logpasswordValue.value
       )
         console.log(`Zalogowano ${el.login}`);
+
+      console.log(user);
+      sessionStorage.setItem("user", JSON.stringify(user));
+      window.location.href = "konto.html";
     });
   }
 }
