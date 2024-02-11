@@ -25,6 +25,8 @@ class newUser {
     this.email = email;
     this.password = password;
     this.profileImg = "images/Profilowe.webp";
+    this.liked = [];
+    this.reserved = [];
   }
 }
 

@@ -19,9 +19,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-#main {
+.main {
   display: flex;
   justify-content: space-around;
+  margin-top: 2.5vmax;
 }
 .box {
   border: 0.3vmax solid var(--Hover);
@@ -42,6 +43,7 @@ body {
   color: var(--Hover);
   font-family: var(--fontFamily);
 }
+.back__button,
 .button__box {
   margin-top: 1.3vmax;
   padding: 0.3vmax 2vmax;
@@ -57,9 +59,6 @@ body {
   border: 0.2vmax solid var(--footerAndHeader);
   color: var(--mainColor);
 }
-.hidden {
-  display: none;
-}
 
 #all__books {
   gap: 1vmax;
@@ -67,4 +66,47 @@ body {
   padding: 2vmax 3vmax;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
+}
+.book {
+  border: none;
+  color: var(--text);
+  font-size: 1vmax;
+  font-family: var(--fontFamily);
+}
+.action {
+  display: flex;
+  align-items: center;
+  flex-basis: 2vmax;
+  gap: 1vmax;
+}
+.book__button_reserve,
+.book__button_like {
+  padding: 1vmax 2vmax;
+  color: var(--mainColor);
+  background-color: var(--footerAndHeader);
+  border: none;
+  height: 100%;
+  width: 100%;
+  font-family: var(--fontFamily);
+  border-radius: 0.2vmax;
+  display: flex;
+  cursor: pointer;
+  font-size: 1vmax;
+}
+.book__button_like {
+  padding: 0.3vmax 1vmax;
+}
+.book__img {
+  padding: 0.2vmax;
+  width: 3vmax;
+  height: 3vmax;
+}
+.back_button__con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 1vmax;
+}
+.hidden {
+  display: none;
 }
