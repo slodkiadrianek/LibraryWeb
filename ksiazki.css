@@ -60,3 +60,11 @@ body {
 .hidden {
   display: none;
 }
+
+#all__books {
+  gap: 1vmax;
+  display: grid;
+  padding: 2vmax 3vmax;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
