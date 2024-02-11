@@ -53,6 +53,9 @@ class App {
       }
     });
     this._bookOfTheDay();
+    sessionStorage.setItem("epikBook", JSON.stringify(epikBook));
+    sessionStorage.setItem("lirykBook", JSON.stringify(lirykBook));
+    sessionStorage.setItem("dramaBook", JSON.stringify(dramaBook));
   }
   // Tworzenie książki
   _bookOfTheDay() {

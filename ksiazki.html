@@ -3,11 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Konto</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="konto.css" />
-    <!-- <script defer src="registerAndLogin.js"></script> -->
-    <script defer src="konto.js"></script>
+    <link rel="stylesheet" href="ksiazki.css">
   </head>
   <body>
     <header id="header">
@@ -32,26 +30,27 @@
         </li>
       </ul>
     </header>
-    <main id="main">
-      <aside class="img__section">
-        <img class="profile__img" src="images/Profilowe.webp" alt="" />
-        <input class="input__file" type="file" />
-      </aside>
-      <section class="info_section">
-        <article class="main__info">
-          <h2 class="hello__user">Witaj</h2>
-          <span class="show__time">Godzina</span>
+    <h2 class="main__text">Wybierz rodzaj książki</h2>
+    <section id="main">
+        <article class="box" >
+            <h2 class="text__box">Liryka</h2>
+            <img src="images/open-book-with-text-lines-svgrepo-com (2).svg" alt="">
+            <button class="button__box" data-type="liryk">Zobacz</button>
         </article>
+        <article class="box">
+            <h2 class="text__box">Epika</h2>
+             <img src="images/swords-sword-svgrepo-com.svg" alt="">
+            <button class="button__box"  data-type="epik">Zobacz</button>
+        </article>
+        <article class="box" >
+               <h2 class="text__box">Dramat</h2>
+             <img src="images/drama-svgrepo-com.svg" alt="">
+            <button class="button__box" data-type="drama">Zobacz</button>
+        </article>
+    </section>
+    <section id="all__books">
 
-        <p class="showEmail">Twój adres email</p>
-        <article>
-          <aside>
-            <p>Ulubione Książki</p>
-            <p>Książki zarezerwowane</p>
-          </aside>
-        </article>
-      </section>
-    </main>
+    </section>
     <footer id="footer">
       <div>
         <h1 class="header__text footer">Biblioteka</h1>
@@ -76,6 +75,5 @@
           placeholder="Podaj swój adres email"
         />
       </div>
-    </footer>
   </body>
 </html>

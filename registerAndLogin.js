@@ -115,9 +115,9 @@ class loginAndRegisterApp {
         el.password === logpasswordValue.value
       )
         console.log(`Zalogowano ${el.login}`);
-
       console.log(user);
       sessionStorage.setItem("user", JSON.stringify(user));
+
       window.location.href = "konto.html";
     });
   }

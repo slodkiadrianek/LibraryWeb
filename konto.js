@@ -6,7 +6,6 @@ const profileImg = document.querySelector(".profile__img");
 const showEmail = document.querySelector(".showEmail");
 
 const data = JSON.parse(sessionStorage.getItem("user"));
-console.log(data);
 
 class App {
   constructor() {
