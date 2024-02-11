@@ -5,7 +5,7 @@ const main = document.querySelector(".main");
 const allBooks = document.querySelector("#all__books");
 const main__text = document.querySelector(".main__text");
 const backButton = document.querySelector(".back__button");
-const data = JSON.parse(sessionStorage.getItem("user"));
+const user = JSON.parse(sessionStorage.getItem("user"));
 
 const epikBook = JSON.parse(sessionStorage.getItem("epikBook"));
 const lirykBook = JSON.parse(sessionStorage.getItem("lirykBook"));
@@ -75,13 +75,12 @@ class App {
       const parent = e.target.closest(".action");
       const higherParent = parent.closest(".box");
       console.log(higherParent.children);
-      const likedObject = {
-        title: higherParent.children[1].textContent,
-        author: higherParent.children[2].textContent,
-      };
+      const likedObject = higherParent.children[1].textContent;
       type.classList.contains("book__button_reserve")
-        ? data.reserved.push(likedObject)
-        : data.liked.push(likedObject);
+        ? user.reserved.push(likedObject)
+        : user.liked.push(likedObject);
+      console.log(user);
+      sessionStorage.setItem("user", JSON.stringify(user));
     } else {
       return;
     }

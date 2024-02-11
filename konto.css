@@ -63,3 +63,7 @@ body {
   font-size: 0.7vmax;
   color: var(--text);
 }
+.show__list {
+  display: flex;
+  justify-content: space-around;
+}
