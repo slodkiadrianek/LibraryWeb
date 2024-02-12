@@ -107,6 +107,18 @@ body {
   align-items: center;
   margin-block: 1vmax;
 }
+.searchField {
+  display: flex;
+  margin-inline: 25%;
+  width: 50%;
+  padding: 1vmax;
+  margin-block-start: 1vmax;
+  font-family: var(--fontFamily);
+  color: var(--text);
+  border: 0.2vmax solid var(--footerAndHeader);
+  border-radius: 0.2vmax;
+  font-size: 1vmax;
+}
 .hidden {
   display: none;
 }

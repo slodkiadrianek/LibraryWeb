@@ -8,7 +8,11 @@ const listedBookReserved = document.querySelector(".listed__book__reserved");
 const listedBookLiked = document.querySelector(".listed__book__liked");
 
 const data = JSON.parse(sessionStorage.getItem("user"));
-console.log(data);
+
+const x = data.liked;
+data.likes = new Set([...x]);
+const y = data.reserved;
+data.reserve = new Set([...y]);
 class App {
   constructor() {
     this._showUserName();
@@ -45,7 +49,7 @@ class App {
       listedBookReserved.insertAdjacentHTML("afterbegin", likedBooks);
     });
 
-    data.liked.forEach((el) => {
+    data.likes.forEach((el) => {
       const likedBooks = `
     <div>
               <p>${el}</p>
