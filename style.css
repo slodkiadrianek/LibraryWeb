@@ -45,7 +45,7 @@ body {
   display: inline;
   font-family: var(--fontFamily);
   margin-inline: 1vmax;
-  font-size: 1vmax;
+  font-size: 1.4vw;
 }
 .heaader__list__el:hover {
   color: var(--Hover);
