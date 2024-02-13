@@ -1,7 +1,10 @@
 "# LibraryWeb"
 Wykorzystane API:
---https://api.quotable.io/random;
---https://wolnelektury.pl/api/books/;
+- Do cytatów
+- Do książek
+- Do pogody
+  
+Strona napisana w HTML, CSS, JS
 
 
 <!-- git remote add origin https://github.com/slodkiadrianek/LibraryWeb.git
