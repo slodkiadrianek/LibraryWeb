@@ -10,6 +10,8 @@ const actualWindSpeed = document.querySelector(".actual__wind__speed");
 const actualElevation = document.querySelector(".actual__elevation");
 const recomendation = document.querySelector(".recomendation");
 const newsletterInput = document.querySelector(".newsletter__input");
+const haburgerMenu = document.querySelector(".haburger__menu");
+const hamburgerShow = document.querySelector(".hamburger__show");
 
 const epikBook = [];
 const lirykBook = [];
@@ -27,6 +29,7 @@ class App {
     this.bookAPI();
     this._getPosition();
     newsletterInput.addEventListener("keydown", this.checkEmail);
+    haburgerMenu.addEventListener("click", this.openHamburger);
   }
   // Tworzenie cytatów
   async quoteApi() {
@@ -118,18 +121,10 @@ class App {
       emailValidation();
     }
   }
+  openHamburger() {
+    hamburgerShow.classList.toggle("hidden");
+    // document.querySelector("body").style.filter = "blur(5px)";
+    // hamburgerShow.style.filter = "blur(0px)";
+  }
 }
 const app = new App();
-
-// const myObj = {};
-// const h = document.getElementById("y");
-// h.addEventListener("click", function (e) {
-//   myObj.u = document.querySelector("#x").value;
-
-//   let myObj_serialized = JSON.stringify(myObj);
-
-//   localStorage.setItem("myObj", myObj_serialized);
-// });
-
-// console.log(myObj.u);
-// console.log(localStorage);

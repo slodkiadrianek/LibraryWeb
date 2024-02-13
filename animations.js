@@ -3,6 +3,7 @@
 const header = document.querySelector("#header");
 const section1 = document.querySelector("#section___1");
 const dailyBookImageBlured = document.querySelectorAll(".daily__book__image");
+
 const section1Heaight = section1.getBoundingClientRect().height;
 const section = document.querySelectorAll(".section");
 
