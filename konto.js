@@ -33,6 +33,9 @@ class App {
   }
   _showProfileImage() {
     profileImg.src = URL.createObjectURL(inputFile.files[0]);
+    data.profileImg = profileImg.src.split("blob:http://127.0.0.1:5500/")[1];
+
+    sessionStorage.setItem("user", JSON.stringify(data));
   }
   _showEmail() {
     showEmail.textContent = `Twój email to ${data.email}`;

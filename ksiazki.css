@@ -53,6 +53,7 @@ body {
   color: var(--footerAndHeader);
   font-size: 0.9vmax;
   font-family: var(--fontFamily);
+  background-color: white;
 }
 .button__box:hover {
   background-color: var(--footerAndHeader);
