@@ -64,6 +64,54 @@ body {
   color: var(--text);
 }
 .show__list {
+  margin-top: 1vmax;
   display: flex;
-  justify-content: space-around;
+  height: 70%;
+  /* border: 2px solid red; */
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vmax;
+  width: 20%;
+  height: 100%;
+}
+.listed__book__liked {
+  width: 80%;
+  border-inline-end: 0.1vmax solid var(--secondSideColor);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.showBooks__title {
+  border-top: 0.1vmax solid var(--secondSideColor);
+  border-bottom: 0.1vmax solid var(--secondSideColor);
+  font-family: var(--fontFamily);
+  text-align: center;
+  font-size: 1vmax;
+  color: var(--text);
+  cursor: pointer;
+}
+.book_liked {
+  margin-top: 1vmax;
+  font-size: 1vmax;
+  font-family: var(--fontFamily);
+}
+.change__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vmax;
+}
+.input__change {
+  text-align: center;
+  border: 0.12vmax solid var(--text);
+  padding: 0.5vmax 2vmax;
+  font-family: var(--fontFamily);
+  font-size: 1vmax;
+  border-radius: 0.2vmax;
+  cursor: pointer;
 }
