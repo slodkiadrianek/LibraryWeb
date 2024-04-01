@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --fontFamily: "Merriweather", sans-serif;
+  --mainColor: #f5f5f5;
+  --sideColor: #3498db;
+  --secondSideColor: #585858;
+  --footerAndHeader: #0f2a46;
+  --text: #333333;
+  --Hover: #853229;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#main {
+  display: flex;
+}
+.img__section {
+  width: 50%;
+  padding: 2vmax 1vmax;
+  margin-left: 4vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info_section {
+  width: 60%;
+  padding: 1vmax;
+}
+.profile__img {
+  padding: 1vmax;
+  border-radius: 50vmax;
+  object-fit: cover;
+  margin-left: -20vmax;
+  margin-top: -2vmax;
+  width: 30vmax;
+  height: 30vmax;
+}
+.input__file {
+  margin-top: 1vmax;
+  margin-left: -20vmax;
+  font-family: var(--fontFamily);
+  color: var(--text);
+  font-size: 0.7vmax;
+}
+.main__info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text);
+  font-family: var(--fontFamily);
+  font-size: 1vmax;
+}
+.showEmail {
+  font-family: var(--fontFamily);
+  font-size: 0.7vmax;
+  color: var(--text);
+}
+.show__list {
+  margin-top: 1vmax;
+  display: flex;
+  height: 70%;
+  /* border: 2px solid red; */
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vmax;
+  width: 20%;
+  height: 100%;
+}
+.listed__book__liked {
+  width: 80%;
+  border-inline-end: 0.1vmax solid var(--secondSideColor);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.showBooks__title {
+  border-top: 0.1vmax solid var(--secondSideColor);
+  border-bottom: 0.1vmax solid var(--secondSideColor);
+  font-family: var(--fontFamily);
+  text-align: center;
+  font-size: 1vmax;
+  color: var(--text);
+  cursor: pointer;
+}
+.book_liked {
+  margin-top: 1vmax;
+  font-size: 1vmax;
+  font-family: var(--fontFamily);
+}
+.change__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vmax;
+}
+.input__change {
+  text-align: center;
+  border: 0.12vmax solid var(--text);
+  padding: 0.5vmax 2vmax;
+  font-family: var(--fontFamily);
+  font-size: 1vmax;
+  border-radius: 0.2vmax;
+  cursor: pointer;
+}

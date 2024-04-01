@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:ital,wght@1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fontFamily: "Merriweather", sans-serif;
+  --mainColor: #f5f5f5;
+  --sideColor: #3498db;
+  --secondSideColor: #585858;
+  --footerAndHeader: #0f2a46;
+  --text: #333333;
+  --Hover: #853229;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1vmax 1.2vmax;
+  padding: 1.5vmax 1.2vmax;
+  background-color: white;
+}
+.text__quote__author,
+.header__text {
+  font-family: var(--fontFamily);
+  color: var(--text);
+  text-transform: uppercase;
+  font-size: 2vmax;
+}
+.heaader__list__menu,
+.heaader__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-family: var(--fontFamily);
+  color: var(--text);
+}
+.heaader__list__el__menu,
+.heaader__list__el {
+  display: inline;
+  font-family: var(--fontFamily);
+  margin-inline: 1vmax;
+  font-size: 1.4vmax;
+}
+.heaader__list__el:hover {
+  color: var(--Hover);
+  cursor: pointer;
+}
+.header__con {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  height: 4vmax;
+  width: 5vmax;
+}
+
+/* section1 */
+#section__5,
+#section__4,
+#section__3,
+#section__2,
+#section___1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10vmax 2vmax;
+  gap: 1vmax;
+}
+
+.text__quote {
+  text-align: center;
+  font-family: var(--fontFamily);
+  color: var(--Hover);
+  font-size: 2.5vmax;
+}
+
+.text__quote__author {
+  color: #0f2a46;
+}
+.proposal__author__text {
+  font-family: var(--fontFamily);
+  font-size: 1.3vmax;
+}
+#section__5,
+#section__2,
+#section__4,
+#section__3 {
+  margin: 7vmax 3vmax;
+}
+
+.long__text {
+  text-align: center;
+  font-family: var(--fontFamily);
+  color: var(--secondSideColor);
+  font-size: 1.3vmax;
+}
+.book__con {
+  display: flex;
+  gap: 2vmax;
+}
+.book__box {
+  gap: 1vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recomendation,
+.actual__elevation,
+.actual__wind__speed,
+.actual__temperature {
+  font-size: 1vmax;
+  font-family: var(--fontFamily);
+  color: var(--text);
+}
+.daily__book__image {
+  width: 23vmax;
+  height: 33vmax;
+}
+.recomendation {
+  font-size: 1.5vmax;
+}
+#footer {
+  background-color: var(--footerAndHeader);
+  color: var(--mainColor);
+  font-family: var(--fontFamily);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2vmax 1vmax;
+  gap: 5vmax;
+}
+.footer {
+  color: var(--mainColor);
+}
+.info__con {
+  display: flex;
+  gap: 4vmax;
+}
+.footer__list__element {
+  margin-block: 1vmax;
+  list-style: none;
+}
+.newsletter__con {
+  display: flex;
+  flex-direction: column;
+  gap: 1vmax;
+}
+.newsletter {
+  font-size: 1.7vmax;
+}
+.newsletter__input::placeholder,
+.newsletter__input {
+  padding: 1.1vmax;
+  background-color: transparent;
+  border: 0.2vmax solid var(--mainColor);
+  border-radius: 0.2vmax;
+  color: var(--mainColor);
+  font-family: var(--fontFamily);
+  font-size: 1.2vmax;
+}
+.newsletter__input::placeholder {
+  border: none;
+  padding: 0vmax;
+}
+.newsletter__input:focus {
+  outline: none;
+}
+.daily__book__image__blured {
+  filter: blur(10px);
+}
+.stickyheader {
+  position: relative;
+  padding: 1vmax 2vmax;
+  z-index: 1;
+  top: -1vmax;
+  left: -2vmax;
+  width: 100%;
+  position: fixed;
+  margin: 0vmax;
+}
+.link {
+  margin: 0;
+  text-decoration: none;
+  color: var(--text);
+}
+.haburger__menu {
+  display: none;
+  width: 3.3vmax;
+  height: 3.3vmax;
+  cursor: pointer;
+}
+.hamburger__show {
+  /* position: none; */
+  /* display: none; */
+  position: absolute;
+  width: 50%;
+  background-color: white;
+  /* opacity: 0.85; */
+  left: 50%;
+  top: 7vmax;
+  z-index: 1;
+  position: fixed;
+  padding: 2vmax;
+}
+.heaader__list__menu {
+  flex-direction: column;
+  align-items: end;
+}
+.heaader__list__el__menu {
+  display: flex;
+  padding-block: 1vmax;
+  /* color: ; */
+}
+.hidden {
+  display: none;
+}
+.actual__weather{
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .book__con {
+    flex-direction: column;
+    gap: 4vmax;
+  }
+  #footer {
+    flex-direction: column;
+    align-items: start;
+    gap: 1vmax;
+    padding-left: 1vmax;
+  }
+  .haburger__menu {
+    display: flex;
+  }
+  .heaader__list {
+    display: none;
+  }
+}

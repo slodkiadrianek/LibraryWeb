@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, Strona biblioteki"
+    />
+    <title>Biblioteka</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="animations.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="responsive.js"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="header">
+      <div class="header__con">
+        <img
+          class="header__logo"
+          src="images/book-open-svgrepo-com.svg"
+          alt=""
+        />
+        <h1 class="header__text">Biblioteka</h1>
+      </div>
+      <ul class="heaader__list">
+        <li class="heaader__list__el"><a class="heaader__list__el link" href="cytaty.html">Cytaty</a></li>
+        <li class="heaader__list__el">
+          <a class="heaader__list__el link" href="ksiazki.html">Książki</a>
+        </li>
+        <li class="heaader__list__el">Konto</li>
+        <li class="heaader__list__el">
+          <a class="heaader__list__el link" href="registerAndLogin.html"
+            >Zaloguj/Zarejestruj</a
+          >
+        </li>
+      </ul>
+      <img
+        class="haburger__menu"
+        src="images/hamburger-menu-svgrepo-com.svg"
+        alt=""
+      />
+    </header>
+    <aside class="hamburger__show hidden">
+      <div>
+        <ul class="heaader__list__menu">
+          <li class="heaader__list__el__menu"> <a class="heaader__list__el__menu link" href="cytaty.html"
+            >Cytaty</a
+          ></li>
+          <li class="heaader__list__el__menu">
+            <a class="heaader__list__el__menu link" href="ksiazki.html"
+              >Książki</a
+            >
+          </li>
+          <li class="heaader__list__el__menu"> <a class="heaader__list__el__menu link" href="konto.html"
+            >Konto</a
+          ></li>
+          <li class="heaader__list__el__menu">
+            <a class="heaader__list__el__menu link" href="registerAndLogin.html"
+              >Zaloguj/Zarejestruj</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- MAIN -->
+    <main>
+      <section id="section___1">
+        <q class="text__quote"></q>
+        <p class="text__quote__author"></p>
+      </section>
+      <section id="section__2" class="section daily__book__image__blured">
+        <h2 class="header__text section__2__header__text">
+          Propozycja książki
+        </h2>
+        <img class="daily__book__image" src="" alt="propozycja książki" />
+        <p class="heaader__list__el proposal__book__text">XYZ</p>
+        <p class="proposal__author__text">AUTHOR</p>
+      </section>
+      <section id="section__3">
+        <h2 class="header__text">Dlaczego warto czytać książki</h2>
+        <p class="long__text">
+          Czytanie książek przynosi wiele korzyści, zarówno dla umysłu, jak i
+          ogólnego rozwoju osobistego. Regularne zanurzanie się w świecie
+          literatury rozwija umysł, poprawia zdolności poznawcze, koncentrację i
+          pamięć. Książki są doskonałym źródłem wiedzy na różnorodne tematy,
+          pozwalając nam zdobywać informacje i poszerzać horyzonty. Czytanie
+          rozbudza zasób słownictwa, poprawia gramatykę i styl pisarski, co jest
+          szczególnie ważne dla doskonalenia umiejętności
+          komunikacyjnych.Dodatkowo, książki pozwalają nam wczuć się w różne
+          postaci, zrozumieć ich motywacje i doświadczenia, kształtując tym
+          samym naszą empatię i zdolność zrozumienia perspektyw innych ludzi.
+          Stanowią również doskonałą formę relaksu i ucieczki od codziennych
+          zmartwień, przenosząc nas w inny świat dostarczający przyjemności i
+          rozrywki. Książki self-help i literatura motywacyjna mogą być
+          inspirujące, wspierając nas w osobistym rozwoju i dostarczając
+          narzędzi do lepszego zrozumienia siebie oraz efektywniejszego
+          osiągania celów. Ponadto, książki są nośnikiem kultury i historii,
+          umożliwiając nam łatwy dostęp do różnych epok, tradycji i perspektyw.
+        </p>
+      </section>
+      <section id="section__4" class="section">
+        <h2 class="header__text">Sprawdź nasze nowości</h2>
+        <main class="book__con daily__book__image__blured section">
+          <article class="book__box">
+            <img
+              class="daily__book__image"
+              src="https://wolnelektury.pl/media/book/cover_api_thumb/a-jednak-ja-nie-watpie-bo-sie-pora-zbliza_ZoxCrgK.jpg"
+              alt="              A jednak ja nie wątpie - bo się pora zbliża              "
+            />
+            <p class="heaader__list__el proposal__book__text">
+              A jednak ja nie wątpie - bo się pora zbliża
+            </p>
+            <p class="proposal__author__text">Juliusz Słowacki</p>
+          </article>
+          <article class="book__box">
+            <img
+              class="daily__book__image"
+              src=" https://wolnelektury.pl/media/book/cover_api_thumb/dwaj-panowie-z-werony_HbGeXHx.jpg"
+              alt="Dwaj Panowe z Werony"
+            />
+            <p class="heaader__list__el proposal__book__text">
+              Dwaj Panowie z Werony
+            </p>
+            <p class="proposal__author__text">Wiliam Szekspir</p>
+          </article>
+          <article class="book__box">
+            <img
+              class="daily__book__image"
+              src="https://wolnelektury.pl/media/book/cover_api_thumb/ajschylos-oresteja_NIxx6Pv.jpg"
+              alt="Oresteja"
+            />
+            <p class="heaader__list__el proposal__book__text">Oresteja</p>
+            <p class="proposal__author__text">Ajschylos</p>
+          </article>
+        </main>
+      </section>
+      <section id="section__5">
+        <h2 class="header__text actual__weather">Obecna pogoda za oknem😊</h2>
+        <p class="actual__temperature"></p>
+        <p class="actual__wind__speed"></p>
+        <p class="actual__elevation"></p>
+        <p class="recomendation"></p>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div>
+        <h1 class="header__text footer">Biblioteka</h1>
+      </div>
+      <div>
+        <ul>
+          <li class="footer__list__element">ul. Marszałkowska 84/92 lok.125</li>
+          <li class="footer__list__element">00-514 Warszawa</li>
+          <li class="footer__list__element">tel. +48 123 456 789</li>
+          <li class="footer__list__element">email biuro@ksiagora.pl</li>
+        </ul>
+      </div>
+      <div class="newsletter__con">
+        <h2 class="newsletter">Newsletter</h2>
+        <p>
+          Jeżeli chcesz być informowany o aktualnościach w serwisie, podaj swój
+          adres e-mail.
+        </p>
+        <input
+          class="newsletter__input"
+          type="text"
+          placeholder="Podaj swój adres email"
+        />
+      </div>
+    </footer>
+  </body>
+</html>
